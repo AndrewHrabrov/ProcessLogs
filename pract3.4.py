@@ -22,11 +22,11 @@ def logs(filename):
                     if ip_count[ip] > max_count:
                         max_count = ip_count[ip]
                         max_ip = ip
+    for key, value in ip_count.items():
+        print(key, value)
 
-
-    return ip_count, max_ip, max_count
+    print("IP с максимальным числом повторений - " + max_ip)
+    print("Число повторений = " + str(max_count))
 
 log_file = "log.txt"
 log_list = logs(log_file)
-for i in log_list:
-    print(i)
